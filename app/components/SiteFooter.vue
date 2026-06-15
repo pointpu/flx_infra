@@ -1,33 +1,33 @@
 <template>
-  <footer class="footer simple-footer">
-    <div class="simple-footer__top">
-      <div>
-        <div class="simple-footer__brand">FLX</div>
-        <p>
-          Информационно-технологический сервис для обработки заявок, данных,
-          документов и технического взаимодействия с партнёрами.
-        </p>
-      </div>
-
-      <nav class="simple-footer__links" aria-label="Документы сервиса">
-        <NuxtLink to="/documents">Все документы</NuxtLink>
-        <NuxtLink to="/offer">Оферта</NuxtLink>
-        <NuxtLink to="/aml-kyc">AML/KYC</NuxtLink>
-        <NuxtLink to="/privacy">Политика ПДн</NuxtLink>
-        <NuxtLink to="/personal-data-consent">Согласие на ПДн</NuxtLink>
-        <NuxtLink to="/risk-disclaimer">Риски</NuxtLink>
-        <NuxtLink to="/refund-policy">Возврат</NuxtLink>
-        <NuxtLink to="/service-rules">Правила</NuxtLink>
-        <NuxtLink to="/cookies">Cookies</NuxtLink>
-      </nav>
+  <footer class="footer clean-footer">
+    <div class="clean-footer__info">
+      <strong>{{ company.fullLegalName }}</strong>
+      <span>ИНН {{ company.inn }}</span>
+      <span>ОГРНИП {{ company.ogrnip }}</span>
+      <a :href="`mailto:${company.email}`">{{ company.email }}</a>
     </div>
 
-    <div class="simple-footer__bottom">
-      <span>ИП Путилин Лев Леонидович</span>
-      <span>ИНН 482414631253</span>
-      <span>ОГРНИП 326480000028445</span>
-      <a href="mailto:tolkoplus@gmail.com">tolkoplus@gmail.com</a>
-      <span>© 2026</span>
-    </div>
+    <nav aria-label="Документы и разделы сайта">
+      <NuxtLink to="/documents">Все документы</NuxtLink>
+      <NuxtLink to="/offer">Публичная оферта</NuxtLink>
+      <NuxtLink to="/service-rules">Правила сервиса</NuxtLink>
+      <NuxtLink to="/privacy">Политика конфиденциальности</NuxtLink>
+      <NuxtLink to="/personal-data-consent">Согласие на обработку ПДн</NuxtLink>
+      <NuxtLink to="/aml-kyc">AML/KYC</NuxtLink>
+      <NuxtLink to="/risk-disclaimer">Уведомление о рисках</NuxtLink>
+      <NuxtLink to="/refund-policy">Возвраты</NuxtLink>
+      <NuxtLink to="/cookies">Cookies</NuxtLink>
+    </nav>
   </footer>
 </template>
+
+<script setup lang="ts">
+defineProps<{
+  company: {
+    fullLegalName: string
+    inn: string
+    ogrnip: string
+    email: string
+  }
+}>()
+</script>

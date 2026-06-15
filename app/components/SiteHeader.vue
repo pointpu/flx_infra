@@ -7,20 +7,15 @@
       </NuxtLink>
 
       <nav class="nav" aria-label="Разделы сайта">
-        <a href="/#services">Услуги</a>
-        <a href="/#pricing">Стоимость</a>
-        <a href="/#payment">Запросить счёт</a>
-        <a href="/#documents-section">Документы</a>
-        <a href="/#contacts">Контакты</a>
+        <NuxtLink to="/services">Услуги</NuxtLink>
+        <NuxtLink to="/pricing">Стоимость</NuxtLink>
+        <NuxtLink to="/workflow">Как работает</NuxtLink>
+        <NuxtLink to="/documents">Документы</NuxtLink>
+        <NuxtLink to="/about">Реквизиты</NuxtLink>
       </nav>
     </div>
 
-    <div class="status-line" aria-label="Статус сервиса">
-      <span>Официальный ИП</span>
-      <span>Документы опубликованы</span>
-      <span>Счёт ЮKassa до оплаты</span>
-      <span>AML/KYC-процедуры</span>
-    </div>
+    <NuxtLink to="/#payment" class="topbar-cta">Оставить заявку</NuxtLink>
   </header>
 </template>
 
