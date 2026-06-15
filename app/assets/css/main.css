@@ -3485,3 +3485,381 @@ h1 {
 }
 
 /* ================= END CLEAN MULTIPAGE STRUCTURE ================= */
+
+/* ===== FIX MOBILE HEADER MENU ===== */
+@media (max-width: 640px) {
+  .topbar-premium {
+    width: min(100% - 20px, 1120px);
+    padding: 12px 10px;
+  }
+
+  .topbar-main {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 12px !important;
+  }
+
+  .brand {
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .nav {
+    display: flex !important;
+    width: 100%;
+    max-width: 100%;
+    flex-wrap: nowrap !important;
+    gap: 8px;
+    overflow-x: auto;
+    padding-bottom: 4px;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .nav a {
+    flex: 0 0 auto;
+    white-space: nowrap;
+    padding: 8px 11px;
+    font-size: 13px;
+  }
+
+  .topbar-cta {
+    width: 100%;
+    margin-top: 10px;
+  }
+}
+/* ===== END FIX MOBILE HEADER MENU ===== */
+
+/* ===== FIX SECTION SPACING ===== */
+
+/* Общие расстояния между блоками */
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+}
+
+/* Если секции сами имеют большие margin/padding */
+section,
+.section,
+.landing-section,
+.documents-section,
+.contacts-section,
+.pricing-section,
+.services-section,
+.process-section,
+.advantages-section {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+/* Уменьшаем внутренние отступы крупных секций */
+.section,
+.landing-section,
+.documents-section,
+.contacts-section,
+.pricing-section,
+.services-section,
+.process-section,
+.advantages-section {
+  padding-top: 48px !important;
+  padding-bottom: 48px !important;
+}
+
+/* Форма заявки ближе к предыдущему блоку */
+.form-section,
+.lead-section,
+.lead-card {
+  margin-top: 0 !important;
+}
+
+/* Футер ближе к последнему блоку */
+.footer,
+.clean-footer {
+  margin-top: 40px !important;
+  padding-top: 32px !important;
+  padding-bottom: 32px !important;
+}
+
+/* На главной уменьшаем гигантские пустоты */
+.site-shell main > * {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+/* Мобильная версия */
+@media (max-width: 768px) {
+  main {
+    gap: 36px;
+  }
+
+  .section,
+  .landing-section,
+  .documents-section,
+  .contacts-section,
+  .pricing-section,
+  .services-section,
+  .process-section,
+  .advantages-section {
+    padding-top: 32px !important;
+    padding-bottom: 32px !important;
+  }
+
+  .footer,
+  .clean-footer {
+    margin-top: 28px !important;
+  }
+}
+
+/* ===== END FIX SECTION SPACING ===== */
+
+/* ===== FINAL TIGHT HOMEPAGE SPACING ===== */
+
+/* Уменьшаем расстояние между основными блоками главной */
+.site-shell main {
+  gap: 28px !important;
+}
+
+/* Убираем лишние внешние отступы у прямых блоков внутри main */
+.site-shell main > * {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+/* Уменьшаем внутренние отступы секций */
+.site-shell main section,
+.site-shell main .section,
+.site-shell main .landing-section,
+.site-shell main .services-section,
+.site-shell main .pricing-section,
+.site-shell main .process-section,
+.site-shell main .advantages-section,
+.site-shell main .documents-section,
+.site-shell main .contacts-section {
+  padding-top: 24px !important;
+  padding-bottom: 24px !important;
+}
+
+/* Карточка заявки ближе к предыдущему блоку */
+.lead-card,
+.lead-section,
+.form-section {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+/* Уменьшаем расстояние перед футером */
+.clean-footer,
+.footer {
+  margin-top: 24px !important;
+}
+
+/* На мобильной версии ещё плотнее */
+@media (max-width: 640px) {
+  .site-shell main {
+    gap: 22px !important;
+  }
+
+  .site-shell main section,
+  .site-shell main .section,
+  .site-shell main .landing-section,
+  .site-shell main .services-section,
+  .site-shell main .pricing-section,
+  .site-shell main .process-section,
+  .site-shell main .advantages-section,
+  .site-shell main .documents-section,
+  .site-shell main .contacts-section {
+    padding-top: 18px !important;
+    padding-bottom: 18px !important;
+  }
+
+  .clean-footer,
+  .footer {
+    margin-top: 18px !important;
+  }
+}
+
+/* ===== END FINAL TIGHT HOMEPAGE SPACING ===== */
+
+/* ===== FIX GAP BETWEEN LEAD FORM AND FOOTER ===== */
+
+/* Последний блок главной ближе к футеру */
+.site-shell main > *:last-child {
+  margin-bottom: 0 !important;
+}
+
+/* Если заявка — предпоследний/последний крупный блок */
+.lead-card,
+.lead-section,
+.form-section {
+  margin-bottom: 0 !important;
+}
+
+/* Убираем большой верхний отступ футера */
+.clean-footer,
+.footer {
+  margin-top: 10px !important;
+  padding-top: 20px !important;
+}
+
+/* Линия футера ближе */
+.clean-footer {
+  border-top: 1px solid rgba(148, 163, 184, 0.16);
+}
+
+/* На мобильной версии тоже плотнее */
+@media (max-width: 640px) {
+  .clean-footer,
+  .footer {
+    margin-top: 8px !important;
+    padding-top: 18px !important;
+  }
+}
+
+/* ===== END FIX GAP BETWEEN LEAD FORM AND FOOTER ===== */
+
+/* ===== FIX GAP ABOVE LEAD BLOCK ===== */
+
+/* Уменьшаем расстояние перед блоком заявки */
+.site-shell main > *:has(+ .lead-card),
+.site-shell main > *:has(+ .lead-section),
+.site-shell main > *:has(+ .form-section) {
+  margin-bottom: 0 !important;
+}
+
+/* Сам блок заявки поднимаем ближе к предыдущему */
+.lead-card,
+.lead-section,
+.form-section {
+  margin-top: -12px !important;
+}
+
+/* Если браузер не применит :has(), сработает общий вариант */
+.documents-section + .lead-card,
+.documents-section + .lead-section,
+.documents-section + .form-section,
+.home-documents + .lead-card,
+.home-documents + .lead-section,
+.home-documents + .form-section {
+  margin-top: -12px !important;
+}
+
+/* Ещё немного уплотняем промежутки внутри главной */
+.site-shell main {
+  gap: 22px !important;
+}
+
+@media (max-width: 640px) {
+  .lead-card,
+  .lead-section,
+  .form-section {
+    margin-top: -8px !important;
+  }
+
+  .site-shell main {
+    gap: 18px !important;
+  }
+}
+
+/* ===== END FIX GAP ABOVE LEAD BLOCK ===== */
+
+/* ===== FINAL UNIFORM HOMEPAGE SPACING ===== */
+
+/* Единое расстояние между всеми основными блоками главной */
+.site-shell main {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 24px !important;
+}
+
+/* Убираем все внешние отступы у прямых блоков */
+.site-shell main > * {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+/* Убираем отрицательные и лишние отступы у заявки */
+.lead-card,
+.lead-section,
+.form-section {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+/* Внутренние отступы секций оставляем компактными */
+.site-shell main section,
+.site-shell main .section,
+.site-shell main .landing-section,
+.site-shell main .services-section,
+.site-shell main .pricing-section,
+.site-shell main .process-section,
+.site-shell main .advantages-section,
+.site-shell main .documents-section,
+.site-shell main .contacts-section {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+/* Расстояние между заявкой и футером такое же небольшое */
+.clean-footer,
+.footer {
+  margin-top: 24px !important;
+  padding-top: 22px !important;
+}
+
+/* На телефоне чуть плотнее */
+@media (max-width: 640px) {
+  .site-shell main {
+    gap: 20px !important;
+  }
+
+  .clean-footer,
+  .footer {
+    margin-top: 20px !important;
+    padding-top: 20px !important;
+  }
+}
+
+/* ===== END FINAL UNIFORM HOMEPAGE SPACING ===== */
+
+/* ===== FINAL FIX PAYMENT BLOCK GAP ===== */
+
+/* Блок заявки должен стоять с таким же расстоянием, как остальные секции */
+.home-clean > #payment,
+.site-shell main > #payment,
+#payment {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+/* Внутренние отступы самой карточки заявки */
+#payment > div {
+  padding-top: 34px !important;
+  padding-bottom: 34px !important;
+}
+
+/* Расстояние между текстом и кнопкой внутри заявки */
+#payment p {
+  margin-bottom: 18px !important;
+}
+
+/* Футер на таком же расстоянии от заявки */
+.clean-footer,
+.footer {
+  margin-top: 24px !important;
+}
+
+/* На телефоне плотнее */
+@media (max-width: 640px) {
+  #payment > div {
+    padding-top: 26px !important;
+    padding-bottom: 26px !important;
+  }
+
+  .clean-footer,
+  .footer {
+    margin-top: 20px !important;
+  }
+}
+
+/* ===== END FINAL FIX PAYMENT BLOCK GAP ===== */
