@@ -106,7 +106,6 @@ const reachPaymentRequestCreatedGoal = (redirectUrl: string) => {
 <template>
   <section id="payment" class="lead">
     <div class="lead__cta">
-      <p class="eyebrow">Заявка</p>
       <h2 class="lead__title">Заявка и счёт на оплату</h2>
 
       <p class="lead__text">

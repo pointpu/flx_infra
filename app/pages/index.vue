@@ -79,7 +79,7 @@ useHead({
     </section>
 
     <section class="home-clean-section home-clean-docs">
-      <div>
+      <div class="home-clean-docs__intro">
         <p class="eyebrow">Документы и реквизиты</p>
         <h2>Условия доступны до оплаты</h2>
         <p>
@@ -88,13 +88,38 @@ useHead({
         </p>
       </div>
 
-      <div class="home-clean-doc-links">
-        <NuxtLink to="/documents">Все документы</NuxtLink>
-        <NuxtLink to="/about">Реквизиты</NuxtLink>
-        <NuxtLink to="/payment">Об оплате</NuxtLink>
-        <NuxtLink to="/offer">Оферта</NuxtLink>
-        <NuxtLink to="/aml-kyc">AML/KYC</NuxtLink>
-      </div>
+      <ul class="home-clean-doc-links">
+        <li>
+          <NuxtLink to="/documents">
+            <span>Все документы</span>
+            <span class="home-clean-doc-links__arr" aria-hidden="true">→</span>
+          </NuxtLink>
+        </li>
+        <li>
+          <NuxtLink to="/about">
+            <span>Реквизиты</span>
+            <span class="home-clean-doc-links__arr" aria-hidden="true">→</span>
+          </NuxtLink>
+        </li>
+        <li>
+          <NuxtLink to="/payment">
+            <span>Оплата по счёту</span>
+            <span class="home-clean-doc-links__arr" aria-hidden="true">→</span>
+          </NuxtLink>
+        </li>
+        <li>
+          <NuxtLink to="/offer">
+            <span>Публичная оферта</span>
+            <span class="home-clean-doc-links__arr" aria-hidden="true">→</span>
+          </NuxtLink>
+        </li>
+        <li>
+          <NuxtLink to="/aml-kyc">
+            <span>Политика AML/KYC</span>
+            <span class="home-clean-doc-links__arr" aria-hidden="true">→</span>
+          </NuxtLink>
+        </li>
+      </ul>
     </section>
 
     <LeadForm />
