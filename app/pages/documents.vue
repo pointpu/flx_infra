@@ -1,16 +1,13 @@
 <script setup lang="ts">
-useHead({ title: "Документы" });
-
-const docs = [
-  { title: "AML/KYC Policy", to: "/aml-kyc" },
-  { title: "Публичная оферта", to: "/offer" },
-  { title: "Cookies Policy", to: "/cookies" },
-  { title: "Risk Disclaimer", to: "/risk-disclaimer" },
-  { title: "Политика возврата средств", to: "/refund-policy" },
-  { title: "Правила оказания услуг", to: "/service-rules" },
-  { title: "Политика обработки персональных данных", to: "/privacy" },
-  { title: "Согласие на обработку персональных данных", to: "/personal-data-consent" },
-];
+useHead({
+  title: "Документы: оферта, AML/KYC, ПДн и правила сервиса | Flyuxora",
+  meta: [
+    {
+      name: "description",
+      content: "Документы Flyuxora: публичная оферта, правила сервиса, политика конфиденциальности, согласие на обработку персональных данных, AML/KYC, риски, возвраты и cookies.",
+    },
+  ],
+});
 </script>
 
 <template>

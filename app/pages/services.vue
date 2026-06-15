@@ -19,8 +19,15 @@
 </template>
 
 <script setup>
-useHead({ title: 'Услуги' })
-
+useHead({
+  title: "IT-услуги, обработка заявок и интеграции | Flyuxora",
+  meta: [
+    {
+      name: "description",
+      content: "Услуги Flyuxora: обработка заявок, техническое сопровождение, API-интеграции, CRM, Telegram-боты, работа с данными, документы и AML/KYC-процедуры.",
+    },
+  ],
+});
 const services = [
   {
     title: 'Обработка заявок',

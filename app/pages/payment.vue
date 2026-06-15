@@ -37,5 +37,13 @@
 </template>
 
 <script setup>
-useHead({ title: 'Оплата' })
+useHead({
+  title: "Оплата через счёт ЮKassa после согласования | Flyuxora",
+  meta: [
+    {
+      name: "description",
+      content: "Порядок оплаты услуг Flyuxora: заявка, согласование стоимости, доступ к документам до оплаты, формирование счёта ЮKassa и выполнение услуги после оплаты.",
+    },
+  ],
+});
 </script>
